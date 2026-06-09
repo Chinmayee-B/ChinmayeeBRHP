@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int R = sc.nextInt();
+        int C = sc.nextInt();
+
+        int[][] a = new int[R][C];
+
+        for (int i = 0; i < R; i++) {
+            for (int j = 0; j < C; j++) {
+                a[i][j] = sc.nextInt();
+            }
+        }
+
+        for (int j = 0; j < C; j++) {
+            int sum = 0;
+
+            for (int i = 0; i < R; i++) {
+                sum += a[i][j];
+            }
+
+            System.out.print(sum + " ");
+        }
+    }
+}
